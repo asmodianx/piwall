@@ -1,5 +1,7 @@
 Enclosed are my rough notes on building a RasPi 4 based bridge firewall.
 
+*** Warning has not been tested ***
+
 So PiHole, price to performance is a good cheap fast layer of security to add to a home network but it lacks teeth.
 A bridge firewall is transparent and takes existing repudation ip lists, black lists ...etc and blocks it at an IP level.
 Its just a flat block so it doesnt tell you why it blocked it, just that an IP was blocked.  
