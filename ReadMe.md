@@ -16,7 +16,9 @@ Steps:
 * get a sdcard $10
 * get a pair of 1GBE usb3 dongles (25$ ?) or a usb3 dual ethernet dongle.
 * install BR tools
-* configure eth1 and eth2 to manual configured in /etc/network/interfaces
+* add br_netfilter to /etc/modules-load.d/modules.conf (so net filtering works on bridge)
+* add "net.bridge.bridge-nf-filter-vlan-tagged = 1" to /etc/sysctl.d/97-bridge.conf  (for acting on tagged traffic)
+* configure eth1 and eth2 to manual configured in /etc/network/interfaces" to rc.local or some other boot time place.
 * add to dhcpcd.conf to "denyinterfaces eth1 eth2 br0"
 * configure as manual br0 in interfaces to include eth1 and eth2
 * install curl
