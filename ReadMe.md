@@ -32,6 +32,7 @@ future todo list:
 * fix firewall logging currently not displaying blocks to syslog.
 
 Notes from initial testing:
-* Changes: 
-** new dhcpcd and the old /etc/network/interface is broken, 
-** bridge-firewall mode and working across vlans support needs to be added via kernel module.
+Changes: 
+* new dhcpcd and the old /etc/network/interface is broken, 
+* bridge-firewall mode and working across vlans support needs to be added via kernel module.
+* I calculated the download on my local network from a NAS server over SMB was roughly the same with or without the bridgefirewall though this was before the kernel bridge firewall mod was added.
