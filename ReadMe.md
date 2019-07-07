@@ -17,6 +17,7 @@ Steps:
 * get a pair of 1GBE usb3 dongles (25$ ?) or a usb3 dual ethernet dongle.
 * install BR tools
 * configure eth1 and eth2 to manual configured in /etc/network/interfaces
+* add to dhcpcd.conf to "denyinterfaces eth1 eth2 br0"
 * configure as manual br0 in interfaces to include eth1 and eth2
 * install curl
 * install script in crontab
