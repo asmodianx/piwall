@@ -8,7 +8,7 @@ if curl -f -o $filename https://rules.emergingthreats.net/fwrules/emerging-IPTAB
         echo "iptables -F ETBLOCKLIST">>$tmp
         echo "iptables -F LOGNDROP">>$tmp
         echo "iptables -F">>$tmp
-        echo "iptables -A LOGNDROP -j LOG --log-prefix 'ET BLOCK: '">>$tmp
+        echo "iptables -A LOGNDROP -j LOG --log-prefix 'ET SRC BLOCK: '">>$tmp
         cat $filename >> $tmp
         rm $filename
         cp $tmp /root/etfw_cache.sh
