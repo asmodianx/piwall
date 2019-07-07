@@ -1,6 +1,6 @@
 Enclosed are my rough notes on building a RasPi 4 based bridge firewall.
 
-*** Warning has not been tested ***
+*** Warning has not been fully tested ***
 
 So PiHole, price to performance is a good cheap fast layer of security to add to a home network but it lacks teeth.
 A bridge firewall is transparent and takes existing repudation ip lists, black lists ...etc and blocks it at an IP level.
@@ -28,5 +28,10 @@ Steps:
 future todo list:
 * configure suricata ids
 * configure syslog with eve json for suricata as well as firewall hits
-* add with pihole or similar to 
+* add with pihole or similar dns filtering
+* fix firewall logging currently not displaying blocks to syslog.
 
+Notes from initial testing:
+* Changes: 
+** new dhcpcd and the old /etc/network/interface is broken, 
+** bridge-firewall mode and working across vlans support needs to be added via kernel module.
